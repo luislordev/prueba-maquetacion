@@ -1,4 +1,145 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
     background-color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+
+.title{
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 0 50%;
+    min-width: 20em; 
+    box-sizing: border-box;
+    margin: 1rem .5em;
+    border-radius: 2em;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+
+@media screen and (min-width: 40em) {
+    .card {
+       max-width: calc(50% -  1.25em);
+       min-width: auto;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .card {
+        max-width: calc(33% - 1.25em);
+    }
+}
+@media screen and (min-width: 71em) {
+    .card {
+        max-width: calc(25% - 1.25em);
+    }
+}
+
+.card-header img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 2em 2em 0 0;
+}
+
+.card-body {
+    padding: .5em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.card-body h4 {
+    margin-bottom: .1em;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #3b3b3b;
+    letter-spacing: 3px;
+}
+
+.card-button{
+    background: transparent;
+    border: 2px solid #1a1a1a;
+    border-radius: 2em;
+    box-sizing: border-box;
+    color: #3b3b3b;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    min-height: 40px;
+    width: 100%;
+    padding: 16px 24px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.card-button:hover {
+    color: white;
+    background-color: #1a1a1a;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.card-button:hover {
+    color: white;
+    background-color: #1a1a1a;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.badge{
+    font-size: smaller;
+    border: 2px solid transparent;
+    border-radius: 2em;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.badge-republic {
+    background-color: #41CC0F;
+    border: 2px solid #41CC0F;
+    color: white;
+}
+.badge-empire {
+    background-color: #1A27B8;
+    border: 2px solid #1A27B8;
+    color: white;
+}
+.badge-rebelion {
+    background-color: #CE2828;
+    border: 2px solid #CE2828;
+    color: white;
+}
+.badge-confederation {
+    background-color: #1A77CC;
+    border: 2px solid #1A77CC;
+    color: white;
 }
